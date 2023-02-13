@@ -1,1 +1,3 @@
-# python-api-challenge
+# Investigating-Weather-Trends-near-the-Equator-using-Python-and-API
+
+The project involved using Python programming language and an API (Application Programming Interface) to investigate weather trends near the equator. The purpose of the project was to gather and analyze weather data to understand any patterns or correlations in temperature and other weather metrics in this region. The data was collected from an API and then processed and analyzed using Python. The results of the analysis were used to draw conclusions about the weather trends near the equator and provide insights into the factors that may be affecting these trends.
