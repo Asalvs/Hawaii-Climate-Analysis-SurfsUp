@@ -1,38 +1,45 @@
-# Hawaii-Climate-Analysis: SurfsUp!
+## Weather and Vacation Analysis
 
-In this project, I analyzed and explored the climate of Honolulu, Hawaii using Python, SQLAlchemy, Pandas, and Matplotlib. The goal was to help with trip planning by conducting a climate analysis of the area.
+This project aims to analyze weather data of various cities to understand the relationship between weather variables and the latitude of the cities. We also utilize the analyzed data to plan future vacations by selecting ideal weather conditions for our trip and finding hotels in the cities that meet our criteria.
 
-## Project Overview
+### Part 1: WeatherPy
 
-I divided the project into two main parts:
+In this part, we create a Python script to visualize the weather of over 500 cities of varying distances from the equator using the `citipy` Python library, the OpenWeatherMap API, and our problem-solving skills.
 
-### Part 1: Analyze and Explore the Climate Data
+We generate scatter plots to showcase the following relationships:
 
-1. I used Python and SQLAlchemy to connect to the SQLite database and reflected the tables into classes.
-2. I performed a precipitation analysis to get the previous 12 months of data.
-3. I performed a station analysis to calculate the total number of stations and find the most active station.
+- Latitude vs. Temperature
+- Latitude vs. Humidity
+- Latitude vs. Cloudiness
+- Latitude vs. Wind Speed
 
-### Part 2: Design a Climate App
+We also compute linear regression for each relationship, separating the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude).
 
-1. I designed a Flask API based on the queries developed in Part 1.
-2. I created routes for precipitation, stations, temperature observations, and specified date ranges.
+### Part 2: VacationPy
 
-## Requirements
+In this part, we use our weather data to plan future vacations. We use Jupyter notebooks, the `geopandas` Python library, and the Geoapify API to create map visualizations of our ideal vacation spots.
 
-- Jupyter Notebook Database Connection
-- Precipitation Analysis
-- Station Analysis
-- API SQLite Connection & Landing Page
-- API Static Routes
-- API Dynamic Route
-- Coding Conventions and Formatting
-- Deployment and Submission
-- Comments
+We narrow down the city_data DataFrame to find our ideal weather conditions and use the Geoapify API to find the first hotel located within 10,000 meters of our coordinates.
 
-## Deployment
+### Getting Started
 
-I deployed the project to a GitHub repository, and it includes the necessary files for analysis and app development.
+1. Clone the repository to your local machine.
+2. Install the required libraries: `pandas`, `numpy`, `matplotlib`, `seaborn`, `requests`, `citipy`, and `geopandas`.
+3. Obtain API keys for [OpenWeatherMap](https://openweathermap.org/api) and [Geoapify](https://www.geoapify.com/).
+4. Create an `api_keys.py` file in the project directory and add your API keys as variables.
+5. Open the `WeatherPy.ipynb` and `VacationPy.ipynb` Jupyter notebooks to explore the analyses and visualizations.
 
-## Acknowledgements
+### Technologies Used
 
-This project uses climate data from the Global Historical Climatology Network-Daily Database, which has been converted to metric units in Pandas.
+- Python
+- Jupyter Notebooks
+- Pandas
+- Numpy
+- Matplotlib
+- Seaborn
+- Requests
+- Citipy
+- Geopandas
+- OpenWeatherMap API
+- Geoapify API
+
